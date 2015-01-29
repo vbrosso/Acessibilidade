@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-size:12px;
+	margin:0;
+	padding:0;
+	font-family:arial, verdana;
+}
+.fontResizer{
+	float:left;
+}
+.fontResizer .txtAcess{
+	float:left;
+	width:100%;
+	margin:5px 0 0 5px;
+	font-size:0.9em;
+	font-family:Arial, verdana;
+	
+}
+.fontResizer_add{
+	color:#454545;
+	text-decoration:none;
+	font-size:1.2em;
+	float:left;
+	margin:0 0 0 7px;
+}
+.fontResizer_minus{
+	color:#454545;
+	text-decoration:none;
+	font-size:0.9em;
+	float:left;
+	margin:3px 0 0 7px;
+}
+.fontResizer_reset{
+	color:#454545;
+	text-decoration:none;
+	font-size:1.2em;	
+	float:left;	
+	margin:3px 0 0 7px;	
+}
+.lstContraste{
+	float:left;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+.lstContraste li{
+	display:inline;
+	background:#454545;
+	color:#fffa11;
+	width:18px;
+	float:left;
+	margin:2px 0 0 5px;	
+}
+.lstContraste li a.btn-contraste1{
+	color:#fff;
+	float:left;
+	width:14px;	
+	text-decoration:none;
+	padding:3px 0 1px 3px;
+	margin:0 0 0 1px;
+	float:left;	
+}
+.lstContraste li a.btn-contraste2{
+	color:#fffa11;
+	float:left;
+	width:14px;	
+	text-decoration:none;
+	padding:3px 0 1px 3px;
+	margin:0 0 0 1px;
+	float:left;	
+}
+p{
+	float:left;
+	clear:both;
+	padding:5px 0 0 7px;
+}
+@media only screen and (max-width:420px){
+	.fontResizer_add{
+		width:44px;
+		height:44px;
+		font-size:2.2em;
+		text-align:center;		
+		margin:8px 0 0 0;		
+	}
+	.fontResizer_minus{
+		width:44px;
+		height:44px;
+		font-size:2.0em;
+		text-align:center;
+		margin:8px 0 0 0;				
+	}
+	.fontResizer_reset{
+		width:44px;
+		height:44px;
+		font-size:2.0em;
+		text-align:center;
+		margin:12px 0 0 0;
+	}
+	.lstContraste li{
+		width:44px;
+		margin:5px 0 0 8px;
+	}
+	.lstContraste li a.btn-contraste1{
+		width:32px;
+		height:39px;
+		font-size:2.0em;
+		padding:5px 0 0 12px;		
+	}
+	.lstContraste li a.btn-contraste2{
+		width:32px;
+		height:39px;
+		font-size:2.0em;
+		padding:5px 0 0 12px;
+	}
+}
+
+body.contraste1{
+	background:#000;
+}
+body.contraste1 p{
+	color:#fff;
+}
+body.contraste2{
+	background:#000;
+}
+body.contraste2 p{
+	color:#FFFD00;
+}
