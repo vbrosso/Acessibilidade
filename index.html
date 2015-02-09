@@ -30,63 +30,6 @@
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> 
 <script type="text/javascript" src="js/jquery.cookie.js"></script> 
 <script type="text/javascript" src="js/funcoes.js"></script> 
-<script type="text/javascript">
-			//AUMENTAR FONTE
-
-			$(".fontResizer_add").click(function () {
-				maisFont();
-			});
-			$(".fontResizer_minus").click(function () {
-				menosFont();
-			});
-			$(".fontResizer_reset").click(function () {
-				resetFont();
-			});
-			
-			(function(){
-				var tam = $.cookie('tamanhoLetra');
-				$('body').css("font-size",tam+"px");
-				console.log("TAMANHO INICIAL",$.cookie('tamanhoLetra'));
-			})();
-
-			function maisFont(){
-				var tamanho = $('body').css("font-size");
-				var maisUm = parseInt(tamanho.substr(0, 2));
-				maisUm++;
-				$.cookie('tamanhoLetra', maisUm,{ path: '/' });
-				$('body').css("font-size",maisUm+"px");
-				console.log("MAiS",$.cookie('tamanhoLetra'));
-			}
-			function menosFont(){
-				var tamanho = $('body').css("font-size");
-				var maisUm = parseInt(tamanho.substr(0, 2));
-				maisUm--;
-				$.cookie('tamanhoLetra', maisUm,{ path: '/' });
-				$('body').css("font-size",maisUm+"px");
-			}
-			function resetFont(){
-				$('body').css("font-size","12px");
-
-				$.removeCookie('contraste2', { path: '/' });
-		 		$.removeCookie('contraste1', { path: '/' });
-
-		 		if (!($.cookie('resetCookie') === "true")) {
-		            $('body').removeClass('contraste1');
-					$('body').removeClass('contraste2');
-		            $.cookie('resetCookie','true',{path:'/'});
-
-		        	$('.fontSize').removeAttr('style');
-		        	$('.fontSize15').removeAttr('style');
-		            $.removeCookie('tamanhoLetra', { path: '/' });
-		        }       
-		        else {
-		        	$('.fontSize').removeAttr('style');
-		        	$('.fontSize15').removeAttr('style');
-		            $.removeCookie('tamanhoLetra', { path: '/' });
-		            $.cookie('resetCookie','false',{path:'/'});
-		        }
-			}
-		</script>
 <noscript>
 Seu navegador não suporta JavaScript!
 </noscript>
